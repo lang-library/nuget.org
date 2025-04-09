@@ -20,6 +20,13 @@ namespace JcCommon;
 
 public static class Api
 {
+    public static bool CheckFixedArguments(string programName, int n, string[] args)
+    {
+        if (args.Length == n) return true;
+        string msg = String.Format("{0} requires {1} argument(s); but {2} argument(s) specified", programName, n, args.Length);
+        Log(args, msg);
+        return false;
+    }
     public static List<string> TextToLines(string text)
     {
         List<string> lines = new List<string>();
