@@ -19,7 +19,7 @@ echo QMAKE_LIBS += -lgraphite2 -lbz2  -lrpcrt4 -lusp10 >> __square$ts.pro
 echo DESTDIR = \$\$PWD >> __square$ts.pro
 rm -rf build
 pro64 -s __square$ts.pro
-cp -p __square$ts.dll ~/cmd/
+#cp -p __square$ts.dll ~/cmd/
 #rm -f *.pro
 
 cat << EOS > JcCommon.swig.cs
