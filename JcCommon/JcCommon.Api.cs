@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using Global;
 using System.Linq;
-using System.Media;
+//using System.Media;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Net;
@@ -212,10 +212,6 @@ public static class Api
         }
         bool result = process.Start();
         return result;
-    }
-    public static void Beep()
-    {
-        SystemSounds.Beep.Play();
     }
     public static void FreeHGlobal(IntPtr x)
     {
