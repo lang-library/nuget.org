@@ -12,6 +12,7 @@ public class Program
         Log(args, "args");
         Echo("helloハロー©");
         Echo(Api.Add2(11, 22));
+        Echo(Math.Add2(111, 222));
         //Echo(Jc.Math.Api.Add2(111, 222));
     }
 }
