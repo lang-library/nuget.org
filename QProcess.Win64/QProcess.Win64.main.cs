@@ -3,14 +3,15 @@
 //*css_ref* Jc.Math.exe
 using static Global.EasyObject;
 
-namespace QProcess.Win64;
+namespace QProcess;
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        Log(args, "args");
         Echo("helloハロー©");
-        Echo(Math.Add2(11, 22));
+        Log(args, "args");
+        //QProcess_Win64.Execute3("ping.exe", "-n\t2\twww.youtube.com", "");
+        QProcess.Win64.Execute("ping.exe", new string[] { "-n", "2", "www.youtube.com" });
     }
 }

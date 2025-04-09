@@ -245,7 +245,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks___square(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_QProcess_Win64(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -273,7 +273,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks___square(
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks___square(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_QProcess_Win64(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -291,7 +291,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback___square(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_QProcess_Win64(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -309,7 +309,7 @@ static SWIG_CSharpWStringHelperCallback SWIG_csharp_wstring_with_length_callback
 #ifdef __cplusplus
 extern "C"
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringCallback___square(SWIG_CSharpWStringHelperCallback callback_utf16, SWIG_CSharpWStringHelperCallback callback_utf32) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringCallback_QProcess_Win64(SWIG_CSharpWStringHelperCallback callback_utf16, SWIG_CSharpWStringHelperCallback callback_utf32) {
   SWIG_csharp_wstring_with_length_callback = sizeof(wchar_t) == 2 ? callback_utf16 : callback_utf32;
 }
 
@@ -322,7 +322,7 @@ static SWIG_CSharpWStringExceptionHelperCallback SWIG_csharp_ApplicationExceptio
 #ifdef __cplusplus
 extern "C"
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringExceptionCallback___square(SWIG_CSharpWStringExceptionHelperCallback callback_utf16, SWIG_CSharpWStringExceptionHelperCallback callback_utf32) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringExceptionCallback_QProcess_Win64(SWIG_CSharpWStringExceptionHelperCallback callback_utf16, SWIG_CSharpWStringExceptionHelperCallback callback_utf32) {
   SWIG_csharp_ApplicationException_callback = sizeof(wchar_t) == 2 ? callback_utf16 : callback_utf32;
 }
 
@@ -421,60 +421,19 @@ static std::wstring Swig_csharp_UTF16ToWString(const unsigned short *str) {
 extern "C" {
 #endif
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new___SquareC(double jarg1, double jarg2) {
-  void * jresult ;
-  double arg1 ;
-  double arg2 ;
-  __SquareC *result = 0 ;
-  
-  arg1 = (double)jarg1; 
-  arg2 = (double)jarg2; 
-  result = (__SquareC *)new __SquareC(arg1,arg2);
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT double SWIGSTDCALL CSharp___SquareC_area(void * jarg1) {
-  double jresult ;
-  __SquareC *arg1 = (__SquareC *) 0 ;
-  double result;
-  
-  arg1 = (__SquareC *)jarg1; 
-  result = (double)(arg1)->area();
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp___SquareC_greeting(void * jarg1, unsigned short * jarg2) {
-  void * jresult ;
-  __SquareC *arg1 = (__SquareC *) 0 ;
+SWIGEXPORT int SWIGSTDCALL CSharp_Execute3(unsigned short * jarg1, unsigned short * jarg2, unsigned short * jarg3) {
+  int jresult ;
+  std::wstring *arg1 = 0 ;
   std::wstring *arg2 = 0 ;
-  std::wstring result;
+  std::wstring *arg3 = 0 ;
+  int result;
   
-  arg1 = (__SquareC *)jarg1; 
-  if (!jarg2) {
+  if (!jarg1) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
     return 0;
   }
-  std::wstring arg2_str(Swig_csharp_UTF16ToWString(jarg2));
-  arg2 = &arg2_str; 
-  result = (arg1)->greeting((std::wstring const &)*arg2);
-  jresult = SWIG_csharp_wstring_with_length_callback((&result)->data(), (int)(&result)->size()); 
-  return jresult;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp___SquareC_execute(void * jarg1, unsigned short * jarg2, unsigned short * jarg3, unsigned short * jarg4) {
-  int jresult ;
-  __SquareC *arg1 = (__SquareC *) 0 ;
-  std::wstring *arg2 = 0 ;
-  std::wstring *arg3 = 0 ;
-  std::wstring *arg4 = 0 ;
-  int result;
-  
-  arg1 = (__SquareC *)jarg1; 
+  std::wstring arg1_str(Swig_csharp_UTF16ToWString(jarg1));
+  arg1 = &arg1_str; 
   if (!jarg2) {
     SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
     return 0;
@@ -487,23 +446,9 @@ SWIGEXPORT int SWIGSTDCALL CSharp___SquareC_execute(void * jarg1, unsigned short
   }
   std::wstring arg3_str(Swig_csharp_UTF16ToWString(jarg3));
   arg3 = &arg3_str; 
-  if (!jarg4) {
-    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
-    return 0;
-  }
-  std::wstring arg4_str(Swig_csharp_UTF16ToWString(jarg4));
-  arg4 = &arg4_str; 
-  result = (int)(arg1)->execute((std::wstring const &)*arg2,(std::wstring const &)*arg3,(std::wstring const &)*arg4);
+  result = (int)Execute3((std::wstring const &)*arg1,(std::wstring const &)*arg2,(std::wstring const &)*arg3);
   jresult = result; 
   return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete___SquareC(void * jarg1) {
-  __SquareC *arg1 = (__SquareC *) 0 ;
-  
-  arg1 = (__SquareC *)jarg1; 
-  delete arg1;
 }
 
 

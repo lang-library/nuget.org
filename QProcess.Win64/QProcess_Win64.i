@@ -1,4 +1,4 @@
-%module __square
+%module QProcess_Win64
 
 %include "std_wstring.i"
 

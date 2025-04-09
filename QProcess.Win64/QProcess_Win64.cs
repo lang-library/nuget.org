@@ -9,5 +9,11 @@
 //------------------------------------------------------------------------------
 
 
-public class __square {
+public class QProcess_Win64 {
+  public static int Execute3(string exe, string args, string cwd) {
+    int ret = QProcess_Win64PINVOKE.Execute3(exe, args, cwd);
+    if (QProcess_Win64PINVOKE.SWIGPendingException.Pending) throw QProcess_Win64PINVOKE.SWIGPendingException.Retrieve();
+    return ret;
+  }
+
 }

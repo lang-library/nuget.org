@@ -1,4 +1,3 @@
-//css_inc __square.cs
-//css_inc __squarePINVOKE.cs
-//css_native __square.dll
-//css_inc __SquareC.cs
+//css_inc QProcess_Win64PINVOKE.cs
+//css_inc QProcess_Win64.cs
+//css_native QProcess_Win64.dll

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-class __squarePINVOKE {
+class QProcess_Win64PINVOKE {
 
   protected class SWIGExceptionHelper {
 
@@ -32,8 +32,8 @@ class __squarePINVOKE {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="SWIGRegisterExceptionCallbacks___square")]
-    public static extern void SWIGRegisterExceptionCallbacks___square(
+    [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="SWIGRegisterExceptionCallbacks_QProcess_Win64")]
+    public static extern void SWIGRegisterExceptionCallbacks_QProcess_Win64(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
                                 ExceptionDelegate divideByZeroDelegate, 
@@ -46,8 +46,8 @@ class __squarePINVOKE {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="SWIGRegisterExceptionArgumentCallbacks___square")]
-    public static extern void SWIGRegisterExceptionCallbacksArgument___square(
+    [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_QProcess_Win64")]
+    public static extern void SWIGRegisterExceptionCallbacksArgument_QProcess_Win64(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
                                 ExceptionArgumentDelegate argumentOutOfRangeDelegate);
@@ -101,7 +101,7 @@ class __squarePINVOKE {
     }
 
     static SWIGExceptionHelper() {
-      SWIGRegisterExceptionCallbacks___square(
+      SWIGRegisterExceptionCallbacks_QProcess_Win64(
                                 applicationDelegate,
                                 arithmeticDelegate,
                                 divideByZeroDelegate,
@@ -114,7 +114,7 @@ class __squarePINVOKE {
                                 overflowDelegate,
                                 systemDelegate);
 
-      SWIGRegisterExceptionCallbacksArgument___square(
+      SWIGRegisterExceptionCallbacksArgument_QProcess_Win64(
                                 argumentDelegate,
                                 argumentNullDelegate,
                                 argumentOutOfRangeDelegate);
@@ -173,22 +173,22 @@ class __squarePINVOKE {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="SWIGRegisterStringCallback___square")]
-    public static extern void SWIGRegisterStringCallback___square(SWIGStringDelegate stringDelegate);
+    [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="SWIGRegisterStringCallback_QProcess_Win64")]
+    public static extern void SWIGRegisterStringCallback_QProcess_Win64(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
       return cString;
     }
 
     static SWIGStringHelper() {
-      SWIGRegisterStringCallback___square(stringDelegate);
+      SWIGRegisterStringCallback_QProcess_Win64(stringDelegate);
     }
   }
 
   static protected SWIGStringHelper swigStringHelper = new SWIGStringHelper();
 
 
-  static __squarePINVOKE() {
+  static QProcess_Win64PINVOKE() {
   }
 
 
@@ -199,8 +199,8 @@ class __squarePINVOKE {
     static SWIGWStringDelegate wstringUTF16Delegate = new SWIGWStringDelegate(CreateWStringFromUTF16);
     static SWIGWStringDelegate wstringUTF32Delegate = new SWIGWStringDelegate(CreateWStringFromUTF32);
 
-    [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="SWIGRegisterWStringCallback___square")]
-    public static extern void SWIGRegisterWStringCallback___square(SWIGWStringDelegate wstringUTF16Delegate, SWIGWStringDelegate wstringUTF32Delegate);
+    [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="SWIGRegisterWStringCallback_QProcess_Win64")]
+    public static extern void SWIGRegisterWStringCallback_QProcess_Win64(SWIGWStringDelegate wstringUTF16Delegate, SWIGWStringDelegate wstringUTF32Delegate);
 
     public static string CreateWStringFromUTF16([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]global::System.IntPtr cString, int length) {
       return global::System.Runtime.InteropServices.Marshal.PtrToStringUni(cString, length);
@@ -216,7 +216,7 @@ class __squarePINVOKE {
     }
 
     static SWIGWStringHelper() {
-      SWIGRegisterWStringCallback___square(wstringUTF16Delegate, wstringUTF32Delegate);
+      SWIGRegisterWStringCallback_QProcess_Win64(wstringUTF16Delegate, wstringUTF32Delegate);
     }
   }
 
@@ -230,8 +230,8 @@ class __squarePINVOKE {
     static SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate = new SWIGWStringExceptionDelegate(SetPendingApplicationExceptionUTF16);
     static SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate = new SWIGWStringExceptionDelegate(SetPendingApplicationExceptionUTF32);
 
-    [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="SWIGRegisterWStringExceptionCallback___square")]
-    public static extern void SWIGRegisterWStringExceptionCallback___square(SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate, SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate);
+    [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="SWIGRegisterWStringExceptionCallback_QProcess_Win64")]
+    public static extern void SWIGRegisterWStringExceptionCallback_QProcess_Win64(SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate, SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate);
 
     static string CreateWStringFromUTF16([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]global::System.IntPtr cString, int length) {
       return global::System.Runtime.InteropServices.Marshal.PtrToStringUni(cString, length);
@@ -256,26 +256,13 @@ class __squarePINVOKE {
     }
 
     static SWIGWStringExceptionHelper() {
-      SWIGRegisterWStringExceptionCallback___square(applicationExceptionUTF16Delegate, applicationExceptionUTF32Delegate);
+      SWIGRegisterWStringExceptionCallback_QProcess_Win64(applicationExceptionUTF16Delegate, applicationExceptionUTF32Delegate);
     }
   }
 
   static protected SWIGWStringExceptionHelper swigWStringExceptionHelper = new SWIGWStringExceptionHelper();
 
 
-  [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="CSharp_new___SquareC")]
-  public static extern global::System.IntPtr new___SquareC(double jarg1, double jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="CSharp___SquareC_area")]
-  public static extern double __SquareC_area(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="CSharp___SquareC_greeting")]
-  [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
-  public static extern string __SquareC_greeting(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="CSharp___SquareC_execute")]
-  public static extern int __SquareC_execute(global::System.Runtime.InteropServices.HandleRef jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg4);
-
-  [global::System.Runtime.InteropServices.DllImport("__square", EntryPoint="CSharp_delete___SquareC")]
-  public static extern void delete___SquareC(global::System.Runtime.InteropServices.HandleRef jarg1);
+  [global::System.Runtime.InteropServices.DllImport("QProcess_Win64", EntryPoint="CSharp_Execute3")]
+  public static extern int Execute3([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg1, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg2, [global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]string jarg3);
 }

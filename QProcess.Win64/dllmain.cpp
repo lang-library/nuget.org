@@ -23,8 +23,8 @@ public:
         argv = get_ansi_args();
         int argc = argv.size();
         this->app = new QCoreApplication(argc, &argv[0]);
-        qDebug() << "MyQt initialized.";
-        qDebug() << qApp->arguments();
+        //qDebug() << "MyQt initialized.";
+        //qDebug() << qApp->arguments();
     }
     virtual ~MyQt()
     {
