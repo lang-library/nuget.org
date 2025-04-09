@@ -11,5 +11,5 @@ g++ -shared -o ~/cmd/__square${ts}.dll -I$HOME/common/include square.cpp __squar
 echo //css_inc __square${ts}.cs > JcCommon.swig.cs
 echo //css_inc __square${ts}PINVOKE.cs >> JcCommon.swig.cs
 echo //css_native __square${ts}.dll >> JcCommon.swig.cs
-echo //css_inc SquareC.cs >> JcCommon.swig.cs
+echo //css_inc __SquareC.cs >> JcCommon.swig.cs
 cat JcCommon.swig.cs
