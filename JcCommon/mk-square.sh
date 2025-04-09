@@ -2,6 +2,8 @@
 set -uvx
 set -e
 ts=`date "+_%Y_%m%d_%H%M_%S_"`
+version=${ts//_/.}
+echo $version
 rm -f __*
 echo %module __square${ts} > __square.i
 cat square.i.txt >> __square.i
