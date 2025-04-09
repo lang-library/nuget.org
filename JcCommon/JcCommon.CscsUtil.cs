@@ -113,7 +113,7 @@ public static class CscsUtil
                 if (m.Success)
                 {
                     string dllName = m.Groups[1].Value;
-                    dllName = Path.GetFullPath(dllName);
+                    //dllName = Path.GetFullPath(dllName);
                     if (!DllList.Contains(dllName))
                     {
                         DllList.Add(dllName);
