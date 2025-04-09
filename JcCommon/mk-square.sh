@@ -18,7 +18,7 @@ echo DESTDIR = \$\$PWD >> __square$ts.pro
 rm -rf build
 pro64 -s __square$ts.pro
 cp -p __square$ts.dll ~/cmd/
-rm -f *.pro
+#rm -f *.pro
 
 cat << EOS > JcCommon.swig.cs
 //css_inc __square${ts}.cs

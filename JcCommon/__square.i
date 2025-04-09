@@ -1,4 +1,4 @@
-%module __square_2025_0409_2335_46_
+%module __square_2025_0410_0002_19_
 
 %include "std_wstring.i"
 

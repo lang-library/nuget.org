@@ -27,5 +27,6 @@ public class Program
         CscsUtil.DebugDump();
         __SquareC sq = new __SquareC(11, 20);
         Echo(sq.area(), "sq.area");
+        Echo(sq.greeting("トム©"));
     }
 }
