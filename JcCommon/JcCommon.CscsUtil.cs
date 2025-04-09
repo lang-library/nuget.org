@@ -90,7 +90,7 @@ public static class CscsUtil
 
             }
             {
-                string pat = @"^//css_resource[ ]+([^ ;]+)[ ]*;?[ ]*";
+                string pat = @"^//css_embed[ ]+([^ ;]+)[ ]*;?[ ]*";
                 Regex r = new Regex(pat);
                 Match m = r.Match(lines[i]);
                 if (m.Success)
