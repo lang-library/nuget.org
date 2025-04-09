@@ -25,13 +25,5 @@ public class Program
 
         CscsUtil.ParseProject(projFileName);
         CscsUtil.DebugDump();
-#if false
-        for (int i = 0; i < CscsUtil.SrcList.Count; i++)
-        {
-            string src = CscsUtil.SrcList[i];
-            CscsUtil.ParseSource(src);
-        }
-        CscsUtil.DebugDump();
-#endif
     }
 }

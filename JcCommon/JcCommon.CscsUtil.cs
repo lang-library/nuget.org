@@ -11,11 +11,13 @@ public static class CscsUtil
     public static List<string> SrcList = new List<string> { };
     public static List<string> PkgList = new List<string> { };
     public static List<string> AsmList = new List<string> { };
+    public static List<string> ResList = new List<string> { };
     public static void DebugDump()
     {
         Log(SrcList, "SrcList");
         Log(PkgList, "PkgList");
         Log(AsmList, "AsmList");
+        Log(ResList, "ResList");
     }
     public static void ParseProject(string projFileName)
     {
@@ -55,6 +57,7 @@ public static class CscsUtil
     private static void ParseSource(string srcPath)
     {
         string source = File.ReadAllText(srcPath);
+        Directory.SetCurrentDirectory(Path.GetDirectoryName(srcPath));
         string[] lines = JcCommon.Api.TextToLines(source).ToArray();
         for (int i = 0; i < lines.Length; i++)
         {
@@ -82,6 +85,21 @@ public static class CscsUtil
                     if (!AsmList.Contains(asmName))
                     {
                         AsmList.Add(asmName);
+                    }
+                }
+
+            }
+            {
+                string pat = @"^//css_resource[ ]+([^ ;]+)[ ]*;?[ ]*";
+                Regex r = new Regex(pat);
+                Match m = r.Match(lines[i]);
+                if (m.Success)
+                {
+                    string resName = m.Groups[1].Value;
+                    resName = Path.GetFullPath(resName);
+                    if (!ResList.Contains(resName))
+                    {
+                        ResList.Add(resName);
                     }
                 }
 
