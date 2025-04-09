@@ -25,5 +25,7 @@ public class Program
 
         CscsUtil.ParseProject(projFileName);
         CscsUtil.DebugDump();
+        SquareC sq = new SquareC(11, 20);
+        Echo(sq.area(), "sq.area");
     }
 }
