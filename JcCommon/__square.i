@@ -1,4 +1,4 @@
-%module square
+%module __square
 
 %include "std_wstring.i"
 

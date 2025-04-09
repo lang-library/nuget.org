@@ -49,23 +49,23 @@ public class SquareC : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          squarePINVOKE.delete_SquareC(swigCPtr);
+          __squarePINVOKE.delete_SquareC(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
     }
   }
 
-  public SquareC(double x, double y) : this(squarePINVOKE.new_SquareC(x, y), true) {
+  public SquareC(double x, double y) : this(__squarePINVOKE.new_SquareC(x, y), true) {
   }
 
   public double area() {
-    double ret = squarePINVOKE.SquareC_area(swigCPtr);
+    double ret = __squarePINVOKE.SquareC_area(swigCPtr);
     return ret;
   }
 
   public string greeting() {
-    string ret = squarePINVOKE.SquareC_greeting(swigCPtr);
+    string ret = __squarePINVOKE.SquareC_greeting(swigCPtr);
     return ret;
   }
 

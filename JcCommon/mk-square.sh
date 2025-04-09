@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
 set -uvx
 set -e
-swig -csharp -c++ -cppext cpp -outdir . square.i
-g++ -shared -o ~/cmd/square.dll -I$HOME/common/include square.cpp square_wrap.cpp --static
+swig -csharp -c++ -cppext cpp -outdir . __square.i
+g++ -shared -o ~/cmd/__square.dll -I$HOME/common/include square.cpp __square_wrap.cpp --static
