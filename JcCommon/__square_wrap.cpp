@@ -245,7 +245,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks___square_2025_0409_2247_38_(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks___square_2025_0409_2248_24_(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -273,7 +273,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks___square_2025_0409_22
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks___square_2025_0409_2247_38_(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks___square_2025_0409_2248_24_(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -291,7 +291,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback___square_2025_0409_2247_38_(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback___square_2025_0409_2248_24_(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -309,7 +309,7 @@ static SWIG_CSharpWStringHelperCallback SWIG_csharp_wstring_with_length_callback
 #ifdef __cplusplus
 extern "C"
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringCallback___square_2025_0409_2247_38_(SWIG_CSharpWStringHelperCallback callback_utf16, SWIG_CSharpWStringHelperCallback callback_utf32) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringCallback___square_2025_0409_2248_24_(SWIG_CSharpWStringHelperCallback callback_utf16, SWIG_CSharpWStringHelperCallback callback_utf32) {
   SWIG_csharp_wstring_with_length_callback = sizeof(wchar_t) == 2 ? callback_utf16 : callback_utf32;
 }
 
@@ -322,7 +322,7 @@ static SWIG_CSharpWStringExceptionHelperCallback SWIG_csharp_ApplicationExceptio
 #ifdef __cplusplus
 extern "C"
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringExceptionCallback___square_2025_0409_2247_38_(SWIG_CSharpWStringExceptionHelperCallback callback_utf16, SWIG_CSharpWStringExceptionHelperCallback callback_utf32) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterWStringExceptionCallback___square_2025_0409_2248_24_(SWIG_CSharpWStringExceptionHelperCallback callback_utf16, SWIG_CSharpWStringExceptionHelperCallback callback_utf32) {
   SWIG_csharp_ApplicationException_callback = sizeof(wchar_t) == 2 ? callback_utf16 : callback_utf32;
 }
 

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 
-class __square_2025_0409_2247_38_PINVOKE {
+class __square_2025_0409_2248_24_PINVOKE {
 
   protected class SWIGExceptionHelper {
 
@@ -32,8 +32,8 @@ class __square_2025_0409_2247_38_PINVOKE {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="SWIGRegisterExceptionCallbacks___square_2025_0409_2247_38_")]
-    public static extern void SWIGRegisterExceptionCallbacks___square_2025_0409_2247_38_(
+    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="SWIGRegisterExceptionCallbacks___square_2025_0409_2248_24_")]
+    public static extern void SWIGRegisterExceptionCallbacks___square_2025_0409_2248_24_(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
                                 ExceptionDelegate divideByZeroDelegate, 
@@ -46,8 +46,8 @@ class __square_2025_0409_2247_38_PINVOKE {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="SWIGRegisterExceptionArgumentCallbacks___square_2025_0409_2247_38_")]
-    public static extern void SWIGRegisterExceptionCallbacksArgument___square_2025_0409_2247_38_(
+    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="SWIGRegisterExceptionArgumentCallbacks___square_2025_0409_2248_24_")]
+    public static extern void SWIGRegisterExceptionCallbacksArgument___square_2025_0409_2248_24_(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
                                 ExceptionArgumentDelegate argumentOutOfRangeDelegate);
@@ -101,7 +101,7 @@ class __square_2025_0409_2247_38_PINVOKE {
     }
 
     static SWIGExceptionHelper() {
-      SWIGRegisterExceptionCallbacks___square_2025_0409_2247_38_(
+      SWIGRegisterExceptionCallbacks___square_2025_0409_2248_24_(
                                 applicationDelegate,
                                 arithmeticDelegate,
                                 divideByZeroDelegate,
@@ -114,7 +114,7 @@ class __square_2025_0409_2247_38_PINVOKE {
                                 overflowDelegate,
                                 systemDelegate);
 
-      SWIGRegisterExceptionCallbacksArgument___square_2025_0409_2247_38_(
+      SWIGRegisterExceptionCallbacksArgument___square_2025_0409_2248_24_(
                                 argumentDelegate,
                                 argumentNullDelegate,
                                 argumentOutOfRangeDelegate);
@@ -173,22 +173,22 @@ class __square_2025_0409_2247_38_PINVOKE {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="SWIGRegisterStringCallback___square_2025_0409_2247_38_")]
-    public static extern void SWIGRegisterStringCallback___square_2025_0409_2247_38_(SWIGStringDelegate stringDelegate);
+    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="SWIGRegisterStringCallback___square_2025_0409_2248_24_")]
+    public static extern void SWIGRegisterStringCallback___square_2025_0409_2248_24_(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
       return cString;
     }
 
     static SWIGStringHelper() {
-      SWIGRegisterStringCallback___square_2025_0409_2247_38_(stringDelegate);
+      SWIGRegisterStringCallback___square_2025_0409_2248_24_(stringDelegate);
     }
   }
 
   static protected SWIGStringHelper swigStringHelper = new SWIGStringHelper();
 
 
-  static __square_2025_0409_2247_38_PINVOKE() {
+  static __square_2025_0409_2248_24_PINVOKE() {
   }
 
 
@@ -199,8 +199,8 @@ class __square_2025_0409_2247_38_PINVOKE {
     static SWIGWStringDelegate wstringUTF16Delegate = new SWIGWStringDelegate(CreateWStringFromUTF16);
     static SWIGWStringDelegate wstringUTF32Delegate = new SWIGWStringDelegate(CreateWStringFromUTF32);
 
-    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="SWIGRegisterWStringCallback___square_2025_0409_2247_38_")]
-    public static extern void SWIGRegisterWStringCallback___square_2025_0409_2247_38_(SWIGWStringDelegate wstringUTF16Delegate, SWIGWStringDelegate wstringUTF32Delegate);
+    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="SWIGRegisterWStringCallback___square_2025_0409_2248_24_")]
+    public static extern void SWIGRegisterWStringCallback___square_2025_0409_2248_24_(SWIGWStringDelegate wstringUTF16Delegate, SWIGWStringDelegate wstringUTF32Delegate);
 
     public static string CreateWStringFromUTF16([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]global::System.IntPtr cString, int length) {
       return global::System.Runtime.InteropServices.Marshal.PtrToStringUni(cString, length);
@@ -216,7 +216,7 @@ class __square_2025_0409_2247_38_PINVOKE {
     }
 
     static SWIGWStringHelper() {
-      SWIGRegisterWStringCallback___square_2025_0409_2247_38_(wstringUTF16Delegate, wstringUTF32Delegate);
+      SWIGRegisterWStringCallback___square_2025_0409_2248_24_(wstringUTF16Delegate, wstringUTF32Delegate);
     }
   }
 
@@ -230,8 +230,8 @@ class __square_2025_0409_2247_38_PINVOKE {
     static SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate = new SWIGWStringExceptionDelegate(SetPendingApplicationExceptionUTF16);
     static SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate = new SWIGWStringExceptionDelegate(SetPendingApplicationExceptionUTF32);
 
-    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="SWIGRegisterWStringExceptionCallback___square_2025_0409_2247_38_")]
-    public static extern void SWIGRegisterWStringExceptionCallback___square_2025_0409_2247_38_(SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate, SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate);
+    [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="SWIGRegisterWStringExceptionCallback___square_2025_0409_2248_24_")]
+    public static extern void SWIGRegisterWStringExceptionCallback___square_2025_0409_2248_24_(SWIGWStringExceptionDelegate applicationExceptionUTF16Delegate, SWIGWStringExceptionDelegate applicationExceptionUTF32Delegate);
 
     static string CreateWStringFromUTF16([global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]global::System.IntPtr cString, int length) {
       return global::System.Runtime.InteropServices.Marshal.PtrToStringUni(cString, length);
@@ -256,23 +256,23 @@ class __square_2025_0409_2247_38_PINVOKE {
     }
 
     static SWIGWStringExceptionHelper() {
-      SWIGRegisterWStringExceptionCallback___square_2025_0409_2247_38_(applicationExceptionUTF16Delegate, applicationExceptionUTF32Delegate);
+      SWIGRegisterWStringExceptionCallback___square_2025_0409_2248_24_(applicationExceptionUTF16Delegate, applicationExceptionUTF32Delegate);
     }
   }
 
   static protected SWIGWStringExceptionHelper swigWStringExceptionHelper = new SWIGWStringExceptionHelper();
 
 
-  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="CSharp_new___SquareC")]
+  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="CSharp_new___SquareC")]
   public static extern global::System.IntPtr new___SquareC(double jarg1, double jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="CSharp___SquareC_area")]
+  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="CSharp___SquareC_area")]
   public static extern double __SquareC_area(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="CSharp___SquareC_greeting")]
+  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="CSharp___SquareC_greeting")]
   [return: global::System.Runtime.InteropServices.MarshalAs(global::System.Runtime.InteropServices.UnmanagedType.LPWStr)]
   public static extern string __SquareC_greeting(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2247_38_", EntryPoint="CSharp_delete___SquareC")]
+  [global::System.Runtime.InteropServices.DllImport("__square_2025_0409_2248_24_", EntryPoint="CSharp_delete___SquareC")]
   public static extern void delete___SquareC(global::System.Runtime.InteropServices.HandleRef jarg1);
 }
