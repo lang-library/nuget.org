@@ -12,12 +12,14 @@ public static class CscsUtil
     public static List<string> PkgList = new List<string> { };
     public static List<string> AsmList = new List<string> { };
     public static List<string> ResList = new List<string> { };
+    public static List<string> DllList = new List<string> { };
     public static void DebugDump()
     {
         Log(SrcList, "SrcList");
         Log(PkgList, "PkgList");
         Log(AsmList, "AsmList");
         Log(ResList, "ResList");
+        Log(DllList, "DllList");
     }
     public static void ParseProject(string projFileName)
     {
@@ -100,6 +102,21 @@ public static class CscsUtil
                     if (!ResList.Contains(resName))
                     {
                         ResList.Add(resName);
+                    }
+                }
+
+            }
+            {
+                string pat = @"^//css_native[ ]+([^ ;]+)[ ]*;?[ ]*";
+                Regex r = new Regex(pat);
+                Match m = r.Match(lines[i]);
+                if (m.Success)
+                {
+                    string dllName = m.Groups[1].Value;
+                    dllName = Path.GetFullPath(dllName);
+                    if (!DllList.Contains(dllName))
+                    {
+                        DllList.Add(dllName);
                     }
                 }
 
