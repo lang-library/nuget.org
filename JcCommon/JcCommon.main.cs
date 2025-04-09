@@ -21,7 +21,7 @@ public class Program
             """);
         Echo(lines, "lines");
         Echo(Api.FreeTcpPort());
-        string projFileName = @"D:\home09\nuget.org\nuget.org\JcCommon\JcCommon.main.cs";
+        string projFileName = @"D:\home09\cs-cmd\my\my.cs";
 
         CscsUtil.ParseProject(projFileName);
         CscsUtil.DebugDump();
