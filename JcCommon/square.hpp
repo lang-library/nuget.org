@@ -1,8 +1,8 @@
 #include <string>
 
-class SquareC {
+class __SquareC {
 public:
-  SquareC(double x, double y);
+  __SquareC(double x, double y);
   double area();
   std::wstring greeting();
 private:
