@@ -1,17 +1,14 @@
-//css_inc JcCommon.api.cs
 //css_nuget EasyObject
-//*css_ref* Jc.Math.exe
 using static Global.EasyObject;
 
 namespace JcCommon;
 
-public class Program
+public static class Api
 {
-    public static void Main(string[] args)
+    public static int Add2(int a, int b)
     {
-        Log(args, "args");
-        Echo("helloハロー©");
-        Echo(Api.Add2(11, 22));
-        //Echo(Jc.Math.Api.Add2(111, 222));
+        Echo(a, "a");
+        Echo(b, "b");
+        return a + b;
     }
 }

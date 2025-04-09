@@ -2,4 +2,11 @@
 set -uvx
 set -e
 cd "$(dirname "$0")"
-cs-build JcCommon.cs
+cwd=`pwd`
+cd $cwd
+rm -rf *.nupkg
+nuget-gen JcCommon.cs
+cd $cwd/build-JcCommon
+dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" JcCommon.csproj
+cd $cwd
+ls -ltr *.nupkg
