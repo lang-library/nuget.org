@@ -1,8 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <TargetFrameworks>netstandard2.1</TargetFrameworks>
-    <Version>2025.0411.0219.52</Version>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Version>2025.0411.0240.34</Version>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <PlatformTarget>AnyCPU</PlatformTarget>
