@@ -35,7 +35,6 @@ public static class CscsUtil
     }
     private static void ParseProjectHelper(string projFileName)
     {
-        ///Echo(projFileName, "projFileName");
         projFileName = Path.GetFullPath(projFileName);
         if (!SrcList.Contains(projFileName))
             SrcList.Add(projFileName);

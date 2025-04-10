@@ -13,17 +13,10 @@ public class Program
         Log(args, "args");
         Log(Api.CheckFixedArguments("dummy", 1, args));
         Echo("helloハロー©");
-        Echo(Math.Add2(111, 222));
-        List<string> lines = Api.TextToLines("""
-            a
-            b
-            c
-            """);
-        Echo(lines, "lines");
-        Echo(Api.FreeTcpPort());
         string projFileName = @"D:\home09\cs-cmd\my\my.cs";
-
         CscsUtil.ParseProject(projFileName);
         CscsUtil.DebugDump();
+        string cs_gen = Api.FindExePath("cs-gen.exe");
+        Echo(cs_gen, "cs_gen");
     }
 }
