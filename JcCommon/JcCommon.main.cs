@@ -19,6 +19,7 @@ public class Program
         CscsUtil.DebugDump();
         string cs_gen = Api.FindExePath("cs-gen.exe");
         Echo(cs_gen, "cs_gen");
-        Installer.InstallResourceDll(typeof(Program).Assembly, "D:\\dll-dir", "JcCommon.main:dummy.dll");
+        string dllPath = Installer.InstallResourceDll(typeof(Program).Assembly, "C:\\dll-dir", "JcCommon.main:dummy.dll");
+        Echo(dllPath, "dllPath");
     }
 }
