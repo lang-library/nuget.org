@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Version>2025.0411.0147.07</Version>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Authors>Robert Zubek</Authors>
+    <Product>CSLisp</Product>
+    <Description>CSLisp Library</Description>
+    <Copyright>Copyright © 2019-2021, Robert Zubek</Copyright>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Title>CSLisp Library</Title>
+    <PackageId>CSLisp</PackageId>
+    <PackageLicenseExpression>BSD-3-Clause-License</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/rzubek/CSLisp</PackageProjectUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+  </ItemGroup>
+</Project>
