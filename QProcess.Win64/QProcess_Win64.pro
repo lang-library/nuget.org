@@ -22,6 +22,6 @@ contains(QMAKE_QMAKE, .*static.*) {
 }
 
 RESOURCES += QProcess_Win64.qrc
-SOURCES += D:\home09\nuget.org\nuget.org\QProcess.Win64\QProcess_Win64.cpp
-SOURCES += D:\home09\nuget.org\nuget.org\QProcess.Win64\dllmain.cpp
-SOURCES += D:\home09\nuget.org\nuget.org\QProcess.Win64\QProcess_Win64_wrap.cpp
+SOURCES += QProcess_Win64.cpp
+SOURCES += dllmain.cpp
+SOURCES += QProcess_Win64_wrap.cpp
