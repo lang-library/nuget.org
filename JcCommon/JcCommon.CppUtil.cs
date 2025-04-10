@@ -10,18 +10,18 @@ public static class CppUtil
 {
     public static List<string> SrcList = new List<string> { };
     public static List<string> HdrList = new List<string> { };
-    public static List<string> PkgList = new List<string> { };
-    public static List<string> AsmList = new List<string> { };
+    //public static List<string> PkgList = new List<string> { };
+    //public static List<string> AsmList = new List<string> { };
     public static List<string> ResList = new List<string> { };
-    public static List<string> DllList = new List<string> { };
+    //public static List<string> DllList = new List<string> { };
     public static void DebugDump()
     {
         Log(SrcList, "SrcList");
         Log(HdrList, "HdrList");
-        Log(PkgList, "PkgList");
-        Log(AsmList, "AsmList");
+        //Log(PkgList, "PkgList");
+        //Log(AsmList, "AsmList");
         Log(ResList, "ResList");
-        Log(DllList, "DllList");
+        //Log(DllList, "DllList");
     }
     public static void ParseProject(string projFileName)
     {
@@ -92,59 +92,16 @@ public static class CppUtil
         for (int i = 0; i < lines.Length; i++)
         {
             {
-                string pat = @"^//css_nuget[ ]+([^ ;]+)[ ]*;?[ ]*";
-                Regex r = new Regex(pat);
-                Match m = r.Match(lines[i]);
-                if (m.Success)
-                {
-                    string pkgName = m.Groups[1].Value;
-                    if (!PkgList.Contains(pkgName))
-                    {
-                        PkgList.Add(pkgName);
-                    }
-                }
-
-            }
-            {
-                string pat = @"^//css_ref[ ]+([^ ;]+)[ ]*;?[ ]*";
-                Regex r = new Regex(pat);
-                Match m = r.Match(lines[i]);
-                if (m.Success)
-                {
-                    string asmName = m.Groups[1].Value;
-                    if (!AsmList.Contains(asmName))
-                    {
-                        AsmList.Add(asmName);
-                    }
-                }
-
-            }
-            {
-                string pat = @"^//css_embed[ ]+([^ ;]+)[ ]*;?[ ]*";
+                string pat = @"^//[+]embed[ ]+([^ ;]+)[ ]*;?[ ]*";
                 Regex r = new Regex(pat);
                 Match m = r.Match(lines[i]);
                 if (m.Success)
                 {
                     string resName = m.Groups[1].Value;
-                    resName = Path.GetFullPath(resName);
+                    //resName = Path.GetFullPath(resName);
                     if (!ResList.Contains(resName))
                     {
                         ResList.Add(resName);
-                    }
-                }
-
-            }
-            {
-                string pat = @"^//css_native[ ]+([^ ;]+)[ ]*;?[ ]*";
-                Regex r = new Regex(pat);
-                Match m = r.Match(lines[i]);
-                if (m.Success)
-                {
-                    string dllName = m.Groups[1].Value;
-                    dllName = Path.GetFullPath(dllName);
-                    if (!DllList.Contains(dllName))
-                    {
-                        DllList.Add(dllName);
                     }
                 }
 
