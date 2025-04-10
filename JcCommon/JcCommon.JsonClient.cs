@@ -47,17 +47,17 @@ public class JsonClient
     }
     private void LoadDll(string dllPath)
     {
-        this.Handle = LoadLibraryExW(
+        this.Handle = Api.LoadLibraryExW(
             dllPath,
             IntPtr.Zero,
-            LoadLibraryFlags.LOAD_WITH_ALTERED_SEARCH_PATH
+            Api.LoadLibraryFlags.LOAD_WITH_ALTERED_SEARCH_PATH
             );
         if (this.Handle == IntPtr.Zero)
         {
             EasyObject.Log($"DLL not loaded: {dllPath}");
             Environment.Exit(1);
         }
-        this.CallPtr = GetProcAddress(Handle, "Call");
+        this.CallPtr = Api.GetProcAddress(Handle, "Call");
         if (this.CallPtr == IntPtr.Zero)
         {
             EasyObject.Log("Call() not found");
@@ -93,17 +93,6 @@ public class JsonClient
         }
     }
 #if false
-    public dynamic Call(dynamic name, dynamic args)
-    {
-        var result = Api.FromJson(CallAsJson(name, args));
-        return result;
-    }
-    public MyData CallAsMyJson(dynamic name, dynamic args)
-    {
-        var result = Call(name, args);
-        return Api.AsMyJson(result);
-    }
-#endif
     [DllImport("kernel32", CharSet = CharSet.Unicode, SetLastError = true)]
     internal static extern IntPtr LoadLibraryW(string lpFileName);
     [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
@@ -123,4 +112,5 @@ public class JsonClient
         LOAD_LIBRARY_SEARCH_SYSTEM32 = 0x00000800,
         LOAD_LIBRARY_SEARCH_DEFAULT_DIRS = 0x00001000
     }
+#endif
 }

@@ -43,6 +43,7 @@ public class Program
         CallGreeting(Handle);
         JsonClient jc = new JsonClient("cs-api.dll");
         Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222 })));
+        Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
     }
     private static void CallAdd2(IntPtr Handle)
     {
