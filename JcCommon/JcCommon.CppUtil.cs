@@ -34,6 +34,11 @@ public static class CppUtil
             string src = SrcList[i];
             ParseSource(src);
         }
+        for (int i = 0; i < HdrList.Count; i++)
+        {
+            string src = HdrList[i];
+            ParseSource(src);
+        }
     }
     private static void ParseProjectHelper(string projFileName, bool header)
     {
@@ -86,6 +91,7 @@ public static class CppUtil
     }
     private static void ParseSource(string srcPath)
     {
+        if (srcPath.StartsWith("$")) return;
         string source = File.ReadAllText(srcPath);
         Directory.SetCurrentDirectory(Path.GetDirectoryName(srcPath));
         string[] lines = JcCommon.Api.TextToLines(source).ToArray();
