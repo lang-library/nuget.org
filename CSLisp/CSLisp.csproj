@@ -2,7 +2,7 @@
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <Version>2025.0411.0147.07</Version>
+    <Version>2025.0411.0149.05</Version>
     <Nullable>disable</Nullable>
     <ImplicitUsings>disable</ImplicitUsings>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -13,7 +13,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <Title>CSLisp Library</Title>
     <PackageId>CSLisp</PackageId>
-    <PackageLicenseExpression>BSD-3-Clause-License</PackageLicenseExpression>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/rzubek/CSLisp</PackageProjectUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <PackageReadmeFile>README.md</PackageReadmeFile>
