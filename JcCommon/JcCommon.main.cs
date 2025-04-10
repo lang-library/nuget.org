@@ -1,6 +1,7 @@
 //css_inc JcCommon.cs
 //css_nuget EasyObject
 //*css_ref* Jc.Math.exe
+//css_embed dummy.dll
 using System.Collections.Generic;
 using static Global.EasyObject;
 
@@ -18,5 +19,6 @@ public class Program
         CscsUtil.DebugDump();
         string cs_gen = Api.FindExePath("cs-gen.exe");
         Echo(cs_gen, "cs_gen");
+        Installer.InstallResourceDll(typeof(Program).Assembly, "D:\\dll-dir", "JcCommon.main:dummy.dll");
     }
 }

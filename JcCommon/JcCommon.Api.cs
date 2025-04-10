@@ -1,4 +1,3 @@
-//css_inc JcCommon.Math.cs
 //css_nuget EasyObject
 using System;
 using System.Collections.Generic;
@@ -373,6 +372,32 @@ public static class Api
         if (s is null) return null;
         byte[] bytes = System.Text.Encoding.UTF8.GetBytes(s);
         return bytes;
+    }
+    public static void Prepare(string dirPath)
+    {
+        Directory.CreateDirectory(dirPath);
+    }
+    public static void PrepareForFile(string filePath)
+    {
+        Prepare(Path.GetDirectoryName(filePath)!);
+    }
+    public static void DownloadBinaryFromUrl(string url, string destinationPath)
+    {
+        PrepareForFile(destinationPath);
+        WebRequest objRequest = System.Net.HttpWebRequest.Create(url);
+        var objResponse = objRequest.GetResponse();
+        byte[] buffer = new byte[32768];
+        using (Stream input = objResponse.GetResponseStream())
+        {
+            using (FileStream output = new FileStream(destinationPath, FileMode.CreateNew))
+            {
+                int bytesRead;
+                while ((bytesRead = input.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    output.Write(buffer, 0, bytesRead);
+                }
+            }
+        }
     }
     internal static class NativeMethods
     {
