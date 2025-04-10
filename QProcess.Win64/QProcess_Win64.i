@@ -3,7 +3,7 @@
 %include "std_wstring.i"
 
 %{
-  #include "square.hpp"
+  #include "QProcess_Win64.hpp"
 %}
 
-%include "square.hpp"
+%include "QProcess_Win64.hpp"

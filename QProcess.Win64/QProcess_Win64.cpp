@@ -1,4 +1,6 @@
-#include "square.hpp"
+//+source dllmain.cpp
+//+source QProcess_Win64_wrap.cpp
+#include "QProcess_Win64.hpp"
 #include <QtCore>
 #include "strconvQt2.h"
 #include "process_util.h"

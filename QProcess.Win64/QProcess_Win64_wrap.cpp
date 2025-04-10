@@ -393,7 +393,7 @@ static void * SWIG_csharp_wstring_callback(const wchar_t *s) {
 #include <string>
 
 
-  #include "square.hpp"
+  #include "QProcess_Win64.hpp"
 
 
 /* For converting from .NET UTF16 (2 byte unicode) strings. wchar_t is 2 bytes on Windows, 4 bytes on Linux. */
