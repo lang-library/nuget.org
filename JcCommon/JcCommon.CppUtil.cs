@@ -37,7 +37,10 @@ public static class CppUtil
     }
     private static void ParseProjectHelper(string projFileName, bool header)
     {
-        projFileName = Path.GetFullPath(projFileName);
+        if (!projFileName.StartsWith("$"))
+        {
+            projFileName = Path.GetFullPath(projFileName);
+        }
         if (header)
         {
             if (!HdrList.Contains(projFileName))
@@ -50,6 +53,7 @@ public static class CppUtil
                 SrcList.Add(projFileName);
 
         }
+        if (projFileName.StartsWith("$")) return;
         string projDir = Path.GetDirectoryName(projFileName);
         Directory.SetCurrentDirectory(projDir);
         string source = File.ReadAllText(projFileName);
@@ -63,7 +67,7 @@ public static class CppUtil
                 if (m.Success)
                 {
                     string srcName = m.Groups[1].Value;
-                    srcName = Path.GetFullPath(srcName);
+                    //srcName = Path.GetFullPath(srcName);
                     ParseProjectHelper(srcName, false);
                 }
             }
@@ -74,7 +78,7 @@ public static class CppUtil
                 if (m.Success)
                 {
                     string srcName = m.Groups[1].Value;
-                    srcName = Path.GetFullPath(srcName);
+                    //srcName = Path.GetFullPath(srcName);
                     ParseProjectHelper(srcName, true);
                 }
             }
