@@ -19,6 +19,16 @@ namespace JcCommon;
 
 public static class Api
 {
+    public static int RunCommand(string exe, params string[] args)
+    {
+        string cmd = exe;
+        for (int i = 0; i < args.Length; i++)
+        {
+            cmd += String.Format(" \"{0}\"", args[i]);
+        }
+        Echo(cmd, "RunCommand");
+        return _wsystem(cmd);
+    }
     public static bool CheckFixedArguments(string programName, int n, string[] args)
     {
         if (args.Length == n) return true;
@@ -399,6 +409,8 @@ public static class Api
             }
         }
     }
+    [DllImport("msvcrt", CharSet = CharSet.Unicode)]
+    internal static extern int _wsystem(string lpCommandLine);
     [DllImport("kernel32", CharSet = CharSet.Unicode, SetLastError = true)]
     internal static extern IntPtr LoadLibraryW(string lpFileName);
     [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
