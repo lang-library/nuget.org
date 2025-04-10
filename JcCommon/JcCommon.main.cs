@@ -18,11 +18,9 @@ public class Program
         Log(args, "args");
         Log(Api.CheckFixedArguments("dummy", 1, args));
         Echo("helloハロー©");
-        string projFileName = @"D:\home09\cs-cmd\my\my.cs";
-        CscsUtil.ParseProject(projFileName);
-        CscsUtil.DebugDump();
-        string cs_gen = Api.FindExePath("cs-gen.exe");
-        Echo(cs_gen, "cs_gen");
+        string projFileName = @"D:\home09\api\nlohmann\main.cpp";
+        CppUtil.ParseProject(projFileName);
+        CppUtil.DebugDump();
         string dllPath = Installer.InstallResourceDll(
             typeof(Program).Assembly,
             "C:\\dll-dir",
