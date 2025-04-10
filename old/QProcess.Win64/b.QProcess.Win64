@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cwd=`pwd`
+cd $cwd
+rm -rf *.nupkg
+nuget-gen QProcess.Win64.cs
+cd $cwd/build-QProcess.Win64
+dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" QProcess.Win64.csproj
+cd $cwd
+ls -ltr *.nupkg

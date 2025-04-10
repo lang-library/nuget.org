@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cs-gen QProcess.Win64.main.cs
+cd build-QProcess.Win64.main
+start QProcess.Win64.main.csproj
