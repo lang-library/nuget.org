@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cwd=`pwd`
+cd $cwd
+rm -rf *.nupkg
+nuget-gen JcCSharp.cs
+cd $cwd/build-JcCSharp
+dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" JcCSharp.csproj
+cd $cwd
+ls -ltr *.nupkg

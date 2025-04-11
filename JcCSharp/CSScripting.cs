@@ -14,7 +14,7 @@ public class CSScripting
 {
     private ScriptOptions _opt;
 
-    public CSScripting(bool implicitUsings = false, string[]? extraUsings = null, params Assembly[] assemblyList)
+    public CSScripting(bool implicitUsings = false, string[] extraUsings = null, params Assembly[] assemblyList)
     {
         this._opt = _CreateOptions(implicitUsings, extraUsings, assemblyList);
     }
@@ -101,7 +101,7 @@ public class CSScripting
         CSharpCompilationOptions scriptCompilationOptions =
             new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary);
         Compilation scriptCompilation = script.GetCompilation().WithOptions(scriptCompilationOptions);
-        Assembly assembly;
+        //Assembly assembly;
         using (MemoryStream ms = new MemoryStream())
         {
             EmitResult result = scriptCompilation.Emit(ms);

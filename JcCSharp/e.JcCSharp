@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cs-gen JcCSharp.main.cs
+cd build-JcCSharp.main
+start JcCSharp.main.csproj
