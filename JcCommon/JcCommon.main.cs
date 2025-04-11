@@ -24,7 +24,7 @@ public class Program
         string dllPath = Installer.InstallResourceDll(
             typeof(Program).Assembly,
             "C:\\dll-dir",
-            "JcCommon.main:add2.dll");
+            "JcCommon:add2.dll");
         Echo(dllPath, "dllPath");
         IntPtr Handle = IntPtr.Zero;
         Handle = Api.LoadLibraryExW(
