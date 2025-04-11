@@ -19,7 +19,7 @@ public class CSScripting
         this._opt = _CreateOptions(implicitUsings, extraUsings, assemblyList);
     }
 
-    private ScriptOptions _CreateOptions(bool implicitUsings, string[]? usingList, params Assembly[] assemblyList)
+    private ScriptOptions _CreateOptions(bool implicitUsings, string[] usingList, params Assembly[] assemblyList)
     {
         List<Assembly> defaultAssemblyList = new List<Assembly>()
         {
@@ -52,7 +52,7 @@ public class CSScripting
             .AddImports(defaultUsingList);
     }
 
-    public async Task<dynamic?> EvalAsync(string source, object? globals = null)
+    public async Task<dynamic> EvalAsync(string source, object globals = null)
     {
         if (globals == null)
         {
@@ -68,14 +68,14 @@ public class CSScripting
         }
     }
 
-    public dynamic? Eval(string source, object? globals = null)
+    public dynamic Eval(string source, object globals = null)
     {
-        Task<dynamic?> task = EvalAsync(source, globals);
+        Task<dynamic> task = EvalAsync(source, globals);
         task.Wait();
         return task.Result;
     }
 
-    public async Task ExecAsync(string source, object? globals = null)
+    public async Task ExecAsync(string source, object globals = null)
     {
         if (globals == null)
         {
@@ -89,7 +89,7 @@ public class CSScripting
         }
     }
 
-    public void Exec(string source, object? globals = null)
+    public void Exec(string source, object globals = null)
     {
         Task task = ExecAsync(source, globals);
         task.Wait();
