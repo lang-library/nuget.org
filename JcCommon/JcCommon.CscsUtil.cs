@@ -1,10 +1,10 @@
 //css_nuget EasyObject
+namespace JcCommon;
+
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using static Global.EasyObject;
-
-namespace JcCommon;
 
 public static class CscsUtil
 {

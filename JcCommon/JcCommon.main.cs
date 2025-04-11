@@ -44,6 +44,17 @@ public class Program
         //Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
         //Api._wsystem("ping www.youtube.com");
         Echo(Api.RunCommand("ping", "-n", "2", "www.youtube.com"));
+        string script = """
+                #! /usr/bin/env js
+                //+ MyClass1.dll
+                echo($1+$2, "タイトル©");
+                var MyApi = importNamespace('MyApi');
+                echo(MyApi.MyClass1.Add2(111, 222), `MyApi.MyClass1.Add2(111, 222)`);
+                """;
+        JavaScript myjs = new JavaScript();
+        //myjs.Init(new string[] { "MyClass1.dll" });
+        myjs.InitForScript(script);
+        myjs.Execute(script, 111, 222);
     }
     private static void CallAdd2(IntPtr Handle)
     {

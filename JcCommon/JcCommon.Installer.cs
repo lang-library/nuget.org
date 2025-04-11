@@ -1,3 +1,5 @@
+namespace JcCommon;
+
 using System;
 using System.IO.Compression;
 using System.IO;
@@ -6,8 +8,6 @@ using System.Security.Cryptography;
 using System.Reflection;
 using System.Text;
 using Global;
-
-namespace JcCommon;
 
 public class Installer
 {

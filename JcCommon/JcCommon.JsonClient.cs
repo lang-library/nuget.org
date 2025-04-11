@@ -1,12 +1,10 @@
-//using MyJson;
+namespace JcCommon;
+
 using Global;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Threading;
 
-namespace JcCommon;
 public class JsonClient
 {
     IntPtr Handle = IntPtr.Zero;
