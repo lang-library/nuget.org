@@ -24,6 +24,16 @@ namespace CSLisp.Core
         void Log (params object[] args);
     }
 
+#if true // by JavaCommons Technologies
+    internal class DefaultLogger : ILogger
+    {
+        bool ILogger.EnableParsingLogging => false;
+        bool ILogger.EnableInstructionLogging => false;
+        bool ILogger.EnableStackLogging => false;
+        void ILogger.Log(params object[] args) { }
+    }
+#endif
+
     /// <summary>
     /// Binds together an instance of a compiler, parser, and executor.
     /// </summary>
@@ -36,6 +46,13 @@ namespace CSLisp.Core
         public readonly Machine vm;
 
         public Context (bool loadLibraries = true, ILogger logger = null) {
+#if true // by JavaCommons Technologies
+            if (logger == null)
+            {
+                logger = new DefaultLogger();
+
+            }
+#endif
             this.code = new Code();
             this.packages = new Packages();
             this.parser = new Parser(packages, logger);

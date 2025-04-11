@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLisp", "CSLisp\CSLisp.csproj", "{FFF58E6F-5525-87B0-7CE4-67DDCCF2D423}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSLisp.Demo", "CSLisp.Demo\CSLisp.Demo.csproj", "{595E4FAF-CD1C-4ED6-8DDD-DC24C6AF766E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF58E6F-5525-87B0-7CE4-67DDCCF2D423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF58E6F-5525-87B0-7CE4-67DDCCF2D423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF58E6F-5525-87B0-7CE4-67DDCCF2D423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF58E6F-5525-87B0-7CE4-67DDCCF2D423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595E4FAF-CD1C-4ED6-8DDD-DC24C6AF766E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595E4FAF-CD1C-4ED6-8DDD-DC24C6AF766E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595E4FAF-CD1C-4ED6-8DDD-DC24C6AF766E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595E4FAF-CD1C-4ED6-8DDD-DC24C6AF766E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A30D62A5-3522-4D50-994E-CFF6390ABE1B}
+	EndGlobalSection
+EndGlobal
