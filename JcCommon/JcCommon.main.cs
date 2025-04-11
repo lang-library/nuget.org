@@ -55,6 +55,13 @@ public class Program
         //myjs.Init(new string[] { "MyClass1.dll" });
         myjs.InitForScript(script);
         myjs.Execute(script, 111, 222);
+        CSScripting css = new CSScripting(false, null, typeof(Global.EasyObject).Assembly);
+        css.Exec("""
+            using static Global.EasyObject;
+            ShowDetail = true;
+            System.Console.WriteLine("from CSScripting");
+            Echo("hello from Echo");
+            """);
     }
     private static void CallAdd2(IntPtr Handle)
     {
