@@ -39,18 +39,18 @@ public class Program
         }
         CallAdd2(Handle);
         CallGreeting(Handle);
-#if false
+#if true
         JsonClient jc = new JsonClient("PROGRAM_native.dll");
         Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222 })));
-        //Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
+        Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
 #else
         string apiScript = """
             //+PROGRAM.dll
             """;
         JavaScript js = new JavaScript();
         js.InitForScript(apiScript);
-#endif
        Echo(js.Evaluate("PROGRAM = importNamespace('PROGRAM');return PROGRAM.Api.add2($1, $2)", 111, 222), "js-result");
+#endif
         //Api._wsystem("ping www.youtube.com");
         Echo(Api.RunCommand("ping", "-n", "2", "www.youtube.com"));
         string script = """

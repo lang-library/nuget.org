@@ -9,6 +9,8 @@ public class JsonClient
 {
     IntPtr Handle = IntPtr.Zero;
     IntPtr CallPtr = IntPtr.Zero;
+    //[UnmanagedFunctionPointer(CallingConvention.StdCall)]
+    //[UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     delegate IntPtr proto_Call(IntPtr name, IntPtr args);
     public JsonClient(string dllSpec)
     {
