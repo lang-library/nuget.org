@@ -39,9 +39,18 @@ public class Program
         }
         CallAdd2(Handle);
         CallGreeting(Handle);
-        JsonClient jc = new JsonClient("cs-api.dll");
+#if false
+        JsonClient jc = new JsonClient("PROGRAM_native.dll");
         Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222 })));
         //Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
+#else
+        string apiScript = """
+            //+PROGRAM.dll
+            """;
+        JavaScript js = new JavaScript();
+        js.InitForScript(apiScript);
+#endif
+       Echo(js.Evaluate("PROGRAM = importNamespace('PROGRAM');return PROGRAM.Api.add2($1, $2)", 111, 222), "js-result");
         //Api._wsystem("ping www.youtube.com");
         Echo(Api.RunCommand("ping", "-n", "2", "www.youtube.com"));
         string script = """
@@ -51,17 +60,7 @@ public class Program
                 var MyApi = importNamespace('MyApi');
                 echo(MyApi.MyClass1.Add2(111, 222), `MyApi.MyClass1.Add2(111, 222)`);
                 """;
-        JavaScript myjs = new JavaScript();
         //myjs.Init(new string[] { "MyClass1.dll" });
-        myjs.InitForScript(script);
-        myjs.Execute(script, 111, 222);
-        CSScripting css = new CSScripting(false, null, typeof(Global.EasyObject).Assembly);
-        css.Exec("""
-            using static Global.EasyObject;
-            ShowDetail = true;
-            System.Console.WriteLine("from CSScripting");
-            Echo("hello from Echo");
-            """);
     }
     private static void CallAdd2(IntPtr Handle)
     {
