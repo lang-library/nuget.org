@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cs-gen Global.Sys.main.cs
+cd build-Global.Sys.main
+start Global.Sys.main.csproj
