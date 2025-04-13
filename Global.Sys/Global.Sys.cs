@@ -16,8 +16,6 @@ using System.Text;
 using System.Threading;
 using static Global.EasyObject;
 
-using static Global.EasyObject;
-
 namespace Global
 {
     public static class Sys
