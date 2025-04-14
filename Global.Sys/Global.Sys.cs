@@ -20,6 +20,15 @@ namespace Global
 {
     public static class Sys
     {
+        public static string GetCwd()
+        {
+            return Directory.GetCurrentDirectory();
+        }
+        public static void SetCwd(string path)
+        {
+            Log($"Sys.SetCwd(): {path}");
+            Directory.SetCurrentDirectory(path);
+        }
         public static string GetFullPath(string path)
         {
             return Path.GetFullPath(path);
