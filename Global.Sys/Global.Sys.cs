@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using Global;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
@@ -21,6 +20,18 @@ namespace Global
 {
     public static class Sys
     {
+        public static string GetFullPath(string path)
+        {
+            return Path.GetFullPath(path);
+        }
+        public static string GetFileName(string path)
+        {
+            return Path.GetFileName(path);
+        }
+        public static string GetBaseName(string path)
+        {
+            return Path.GetFileNameWithoutExtension(Path.GetFileName(path));
+        }
         public static Assembly AssemblyForTypeName(string typeName)
         {
             Type type = Type.GetType(typeName);
