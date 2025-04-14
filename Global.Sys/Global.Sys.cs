@@ -20,6 +20,11 @@ namespace Global
 {
     public static class Sys
     {
+        public static Assembly AssemblyForTypeName(string typeName)
+        {
+            Type type = Type.GetType(typeName);
+            return type.Assembly;
+        }
         public static object CallAssemblyStaticMethod(Assembly asm, string typeName, string methodName, params object[] args)
         {
             System.Type type = asm.GetType(typeName);

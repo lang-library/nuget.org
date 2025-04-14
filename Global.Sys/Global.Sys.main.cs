@@ -41,6 +41,14 @@ namespace Global
             System.Reflection.Assembly asm = System.Reflection.Assembly.LoadFrom(asmPath);
             object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "add2", 777, 1);
             Echo(methodResult, "methodResult");
+            asm = Sys.AssemblyForTypeName("Global.Program");
+            Echo(asm == null);
+            methodResult = Sys.CallAssemblyStaticMethod(asm, "Global.Program", "Add3", 11, 22, 33);
+            Echo(methodResult, "methodResult");
+        }
+        public static int Add3(int a, int b, int c)
+        {
+            return a + b + c;
         }
         private static void CallAdd2(IntPtr Handle)
         {
