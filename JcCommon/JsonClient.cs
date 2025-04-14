@@ -1,3 +1,4 @@
+#if false
 namespace JcCommon;
 
 using Global;
@@ -114,3 +115,4 @@ public class JsonClient
     }
 #endif
 }
+#endif

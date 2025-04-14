@@ -40,10 +40,10 @@ public class Program
         CallAdd2(Handle);
         CallGreeting(Handle);
 #if true
-        JsonClient jc = new JsonClient("PROGRAM_native.dll");
+        JsonApiClient jc = new JsonApiClient("cs-api.dll");
         Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222 })));
         //Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
-//#else
+#else
         string apiScript = """
             //+NewSys.exe
             """;
