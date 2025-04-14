@@ -110,12 +110,14 @@ namespace Global
             foreach (string test in PATH.Split(';'))
             {
                 string path = test.Trim();
+                if (!String.IsNullOrEmpty(path) && File.Exists(Path.Combine(path, "dotnet4", exe)))
+                    return Path.GetFullPath(Path.Combine(path, "dotnet4", exe));
                 if (!String.IsNullOrEmpty(path) && File.Exists(Path.Combine(path, exe)))
                     return Path.GetFullPath(Path.Combine(path, exe));
                 string baseName = Path.GetFileNameWithoutExtension(exe);
-                baseName += ".bin";
-                if (!String.IsNullOrEmpty(path) && File.Exists(Path.Combine(path, baseName, exe)))
-                    return Path.GetFullPath(Path.Combine(path, baseName, exe));
+                //baseName += ".bin";
+                if (!String.IsNullOrEmpty(path) && File.Exists(Path.Combine(path, $"{baseName}.bin", exe)))
+                    return Path.GetFullPath(Path.Combine(path, $"{baseName}.bin", exe));
             }
             return null;
         }

@@ -16,7 +16,7 @@ namespace Global
             Log(args, "args");
             Log(Sys.CheckFixedArguments("dummy", 1, args));
             Echo("helloハロー©");
-            //string projFileName = @"D:\home09\api\nlohmann\main.cpp";
+            Echo(Sys.FindExePath("PROGRAM.dll"), """Sys.FindExePath("PROGRAM.dll")""");
             string dllPath = Installer.InstallResourceDll(
                 typeof(Program).Assembly,
                 "C:\\dll-dir",
