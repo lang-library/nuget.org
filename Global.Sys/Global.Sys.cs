@@ -28,6 +28,10 @@ namespace Global
         {
             return Path.GetFileName(path);
         }
+        public static string GetDirectoryName(string path)
+        {
+            return Path.GetDirectoryName(path);
+        }
         public static string GetBaseName(string path)
         {
             return Path.GetFileNameWithoutExtension(Path.GetFileName(path));
