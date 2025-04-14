@@ -29,6 +29,7 @@ namespace Global
         }
         public static object CallAssemblyStaticMethod(Assembly asm, string typeName, string methodName, params object[] args)
         {
+            if (asm == null) return null;
             System.Type type = asm.GetType(typeName, false);
             if (type == null) return null;
             System.Reflection.MethodInfo method = type.GetMethod(methodName, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
