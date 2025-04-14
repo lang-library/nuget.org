@@ -1,5 +1,6 @@
 //css_inc Global.Installer.cs
 //css_inc Global.JsonApiClient.cs
+//css_inc Global.JsonApiServer.cs
 //css_nuget EasyObject
 using System;
 using System.Collections.Generic;
@@ -23,12 +24,15 @@ namespace Global
         public static Assembly AssemblyForTypeName(string typeName)
         {
             Type type = Type.GetType(typeName);
+            if (type == null) return null;
             return type.Assembly;
         }
         public static object CallAssemblyStaticMethod(Assembly asm, string typeName, string methodName, params object[] args)
         {
-            System.Type type = asm.GetType(typeName);
+            System.Type type = asm.GetType(typeName, false);
+            if (type == null) return null;
             System.Reflection.MethodInfo method = type.GetMethod(methodName, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+            if (method == null) return null;
             object methdResult = method.Invoke(null, args);
             return methdResult;
         }

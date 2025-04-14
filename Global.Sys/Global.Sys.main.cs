@@ -39,7 +39,7 @@ namespace Global
 
             string asmPath = Sys.FindExePath("PROGRAM.dll");
             System.Reflection.Assembly asm = System.Reflection.Assembly.LoadFrom(asmPath);
-            object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "add2", 777, 1);
+            object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "Add2", 777, 1);
             Echo(methodResult, "methodResult");
             asm = Sys.AssemblyForTypeName("Global.Program");
             Echo(asm == null);
