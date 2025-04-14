@@ -458,7 +458,7 @@ namespace Global
         [DllImport("kernel32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
         public static extern IntPtr LoadLibraryExW(string dllToLoad, IntPtr hFile, LoadLibraryFlags flags);
         [DllImport("kernel32", CharSet = CharSet.Ansi, SetLastError = true, ExactSpelling = false)]
-        internal static extern IntPtr GetProcAddress(IntPtr hModule, string lpProcName);
+        public static extern IntPtr GetProcAddress(IntPtr hModule, string lpProcName);
         [System.Flags]
         public enum LoadLibraryFlags : uint
         {

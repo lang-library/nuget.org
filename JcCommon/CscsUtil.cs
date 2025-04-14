@@ -1,9 +1,11 @@
-//css_nuget EasyObject
+//css_nuget Global.Sys
+
 namespace JcCommon;
 
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
+using Global;
 using static Global.EasyObject;
 
 public static class CscsUtil
@@ -41,7 +43,7 @@ public static class CscsUtil
         string projDir = Path.GetDirectoryName(projFileName);
         Directory.SetCurrentDirectory(projDir);
         string source = File.ReadAllText(projFileName);
-        string[] lines = JcCommon.Api.TextToLines(source).ToArray();
+        string[] lines = Sys.TextToLines(source).ToArray();
         for (int i = 0; i < lines.Length; i++)
         {
             string pat = @"^//css_inc[ ]+([^ ;]+)[ ]*;?[ ]*";
@@ -59,7 +61,7 @@ public static class CscsUtil
     {
         string source = File.ReadAllText(srcPath);
         Directory.SetCurrentDirectory(Path.GetDirectoryName(srcPath));
-        string[] lines = JcCommon.Api.TextToLines(source).ToArray();
+        string[] lines = Sys.TextToLines(source).ToArray();
         for (int i = 0; i < lines.Length; i++)
         {
             {

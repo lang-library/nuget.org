@@ -1,4 +1,5 @@
-//css_nuget EasyObject
+#if false
+//css_nuget Global.Sys
 namespace JcCommon;
 
 using System;
@@ -7,7 +8,6 @@ using System.Diagnostics;
 using System.IO;
 using Global;
 using System.Linq;
-//using System.Media;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Net;
@@ -438,3 +438,4 @@ public static class Api
         internal static extern uint GetACP();
     }
 }
+#endif

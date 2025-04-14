@@ -1,3 +1,4 @@
+#if false
 namespace JcCommon;
 
 using System;
@@ -97,3 +98,4 @@ public class Installer
         }
     }
 }
+#endif
