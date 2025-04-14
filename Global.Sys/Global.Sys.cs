@@ -20,6 +20,13 @@ namespace Global
 {
     public static class Sys
     {
+        public static object CallAssemblyStaticMethod(Assembly asm, string typeName, string methodName, params object[] args)
+        {
+            System.Type type = asm.GetType(typeName);
+            System.Reflection.MethodInfo method = type.GetMethod(methodName, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+            object methdResult = method.Invoke(null, args);
+            return methdResult;
+        }
         public static int RunCommand(string exe, params string[] args)
         {
             string cmd = exe;

@@ -35,11 +35,12 @@ namespace Global
             }
             CallAdd2(Handle);
             CallGreeting(Handle);
-            Echo(Sys.RunCommand("ping", "-n", "2", "www.youtube.com"));
-            //JsonApiClient jc = new JsonApiClient("cs-api.dll");
-            JsonApiClient jc = new JsonApiClient("PROGRAM.native.dll");
-            Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222 })));
-            //Echo(jc.Call("add2", EasyObject.FromObject(new object[] { 1111, 2222, 3333 })));
+            //Echo(Sys.RunCommand("ping", "-n", "2", "www.youtube.com"));
+
+            string asmPath = Sys.FindExePath("PROGRAM.dll");
+            System.Reflection.Assembly asm = System.Reflection.Assembly.LoadFrom(asmPath);
+            object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "add2", 777, 1);
+            Echo(methodResult, "methodResult");
         }
         private static void CallAdd2(IntPtr Handle)
         {
