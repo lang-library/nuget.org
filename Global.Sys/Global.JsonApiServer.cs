@@ -6,21 +6,11 @@ using static Global.EasyObject;
 namespace Global;
 public class JsonApiServer
 {
-    IntPtr Handle = IntPtr.Zero;
-    IntPtr CallPtr = IntPtr.Zero;
-    IntPtr LastErrorPtr = IntPtr.Zero;
-    delegate IntPtr proto_Call(IntPtr name, IntPtr args);
     public JsonApiServer()
     {
     }
-    static ThreadLocal<IntPtr> HandleCallPtr = new ThreadLocal<IntPtr>();
     public IntPtr HandleNativeCall(Type apiType, IntPtr nameAddr, IntPtr inputAddr)
     {
-        if (HandleCallPtr.Value != IntPtr.Zero)
-        {
-            Sys.FreeHGlobal(HandleCallPtr.Value);
-            HandleCallPtr.Value = IntPtr.Zero;
-        }
         var name = Sys.UTF8AddrToString(nameAddr);
         var input = Sys.UTF8AddrToString(inputAddr);
         EasyObject args = FromJson(input);
@@ -45,8 +35,11 @@ public class JsonApiServer
             }
         }
         string output = FromObject(result).ToJson();
-        HandleCallPtr.Value = Sys.StringToUTF8Addr(output);
-        return HandleCallPtr.Value;
+        return Sys.StringToUTF8Addr(output);
+    }
+    public void HandleNativeFree(IntPtr resultAddr)
+    {
+        Sys.FreeHGlobal(resultAddr);
     }
     public string HandleDotNetCall(Type apiType, string name, string input)
     {
