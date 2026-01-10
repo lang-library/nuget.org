@@ -1,0 +1,12 @@
+#! /usr/bin/env bash
+set -uvx
+set -e
+cd "$(dirname "$0")"
+cwd=`pwd`
+cd $cwd
+rm -rf *.nupkg
+nuget-gen EasyScript.cs
+cd $cwd/build-EasyScript
+dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" EasyScript.csproj
+cd $cwd
+ls -ltr *.nupkg
