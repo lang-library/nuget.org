@@ -11,12 +11,14 @@ public class Program
         Log(args, "args");
         Echo("helloハロー©");
         var engine = new Global.EasyScript();
+        engine.SetValue("x", 222);
         var result = engine.EvaluateAsEasyObject(
             """
-            var answer = 111 + 222;
+            var answer = $1 + x;
             echo(answer, "answer");
+            log(answer, "answer");
             return answer;
-            """);
+            """, 111);
             
         Echo(result.IsNumber);
         Echo(result);
