@@ -37,14 +37,14 @@ namespace Global
             CallGreeting(Handle);
             //Echo(Sys.RunCommand("ping", "-n", "2", "www.youtube.com"));
 
-            string asmPath = Sys.FindExePath("PROGRAM.dll");
-            System.Reflection.Assembly asm = System.Reflection.Assembly.LoadFrom(asmPath);
-            object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "Add2", 777, 1);
-            Echo(methodResult, "methodResult");
-            asm = Sys.AssemblyForTypeName("Global.Program");
-            Echo(asm == null);
-            methodResult = Sys.CallAssemblyStaticMethod(asm, "Global.Program", "Add3", 11, 22, 33);
-            Echo(methodResult, "methodResult");
+            //string asmPath = Sys.FindExePath("PROGRAM.dll");
+            //System.Reflection.Assembly asm = System.Reflection.Assembly.LoadFrom(asmPath);
+            //object methodResult = Sys.CallAssemblyStaticMethod(asm, "PROGRAM.Api", "Add2", 777, 1);
+            //Echo(methodResult, "methodResult");
+            //asm = Sys.AssemblyForTypeName("Global.Program");
+            //Echo(asm == null);
+            //methodResult = Sys.CallAssemblyStaticMethod(asm, "Global.Program", "Add3", 11, 22, 33);
+            //Echo(methodResult, "methodResult");
         }
         public static int Add3(int a, int b, int c)
         {

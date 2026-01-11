@@ -15,7 +15,7 @@ public class JsonApiServer
         var input = Sys.UTF8AddrToString(inputAddr);
         EasyObject args = FromJson(input);
         MethodInfo mi = apiType.GetMethod(name);
-        dynamic result = null;
+        object result = null;
         if (mi == null)
         {
             result = $"API not found: {name}";
@@ -25,8 +25,7 @@ public class JsonApiServer
             try
             {
                 result = mi.Invoke(null, new object[] { args });
-                EasyObject okResult = EasyObject.EmptyArray;
-                okResult.Add(result);
+                var okResult = new object[] { FromObject(result).ToObject() };
                 result = okResult;
             }
             catch (TargetInvocationException ex)
@@ -55,8 +54,7 @@ public class JsonApiServer
             try
             {
                 result = mi.Invoke(null, new object[] { args });
-                EasyObject okResult = EasyObject.EmptyArray;
-                okResult.Add(result);
+                var okResult = new object[] { FromObject(result).ToObject() };
                 result = okResult;
             }
             catch (TargetInvocationException ex)
