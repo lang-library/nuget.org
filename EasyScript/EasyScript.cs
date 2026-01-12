@@ -15,8 +15,6 @@ public class EasyScript
     protected List<Assembly> asmList = new List<Assembly>();
     public EasyScript(Assembly[]? memAsmList = null)
     {
-        //Console.Error.WriteLine($"[EasyScript] Initializing {typeof(EasyScript).Assembly.Location}...");
-        //asmList.Clear();
         if (memAsmList != null)
         {
             foreach (var asm in memAsmList)
@@ -26,109 +24,6 @@ public class EasyScript
         }
         engine = JintScript.CreateEngine(asmList.ToArray());
     }
-    ////public void InitForScript(string script, Assembly[] memAsmList = null)
-    ////{
-    ////    var lines = TextToLines(script);
-    ////    //Echo(lines, "lines");
-    ////    List<string> specs = new List<string>();
-    ////    foreach (var line in lines)
-    ////    {
-    ////        if (line.StartsWith("//+"))
-    ////        {
-    ////            string spec = line.Substring(3);
-    ////            spec = spec.Trim();
-    ////            specs.Add(spec);
-    ////        }
-    ////    }
-    ////    Init(specs.ToArray(), memAsmList);
-    ////}
-    //protected string[] TextToLines(string text)
-    //{
-    //    List<string> lines = new List<string>();
-    //    using (StringReader sr = new StringReader(text))
-    //    {
-    //        string line;
-    //        while ((line = sr.ReadLine()) != null)
-    //        {
-    //            lines.Add(line);
-    //        }
-    //    }
-    //    return lines.ToArray();
-    //}
-    //protected Assembly LoadAssemblyForSpec(string asmSpec, Assembly assembly)
-    //{
-    //    string cwd = Path.GetDirectoryName(assembly.Location);
-    //    return LoadAssemblyForSpec(asmSpec, cwd);
-    //}
-
-    //////protected Assembly LoadAssemblyForSpec(string asmSpec, string cwd = null)
-    //////{
-    //////    Console.Error.WriteLine($"[EasyScript] //+ {asmSpec}");
-    //////    string realPath = null;
-    //////    if (cwd != null)
-    //////    {
-    //////        realPath = FindExePath(asmSpec, cwd);
-    //////    }
-    //////    else
-    //////    {
-    //////        realPath = FindExePath(asmSpec);
-    //////    }
-    //////    if (realPath is null)
-    //////    {
-    //////        string error = $"{asmSpec} not found";
-    //////        Console.Error.WriteLine(error);
-    //////        throw new Exception(error);
-    //////    }
-    //////    Console.Error.WriteLine($"[myjs] Loading {realPath}...");
-    //////    var asm = Assembly.LoadFrom(realPath);
-    //////    return asm;
-    //////}
-    ////protected string FindExePath(string exe)
-    ////{
-    ////    string cwd = "";
-    ////    return FindExePath(exe, cwd);
-    ////}
-    ////protected string FindExePath(string exe, string cwd)
-    ////{
-    ////    exe = Environment.ExpandEnvironmentVariables(exe);
-    ////    if (Path.IsPathRooted(exe))
-    ////    {
-    ////        if (!File.Exists(exe)) return null;
-    ////        return Path.GetFullPath(exe);
-    ////    }
-    ////    var PATH = Environment.GetEnvironmentVariable("PATH") ?? "";
-    ////    PATH = $"{cwd};{PATH}";
-    ////    foreach (string test in PATH.Split(';'))
-    ////    {
-    ////        string path = test.Trim();
-    ////        if (!String.IsNullOrEmpty(path) && File.Exists(path = Path.Combine(path, exe)))
-    ////            return Path.GetFullPath(path);
-    ////    }
-    ////    return null;
-    ////}
-    //protected string FindExePath(string exe, Assembly assembly)
-    //{
-    //    int bit = IntPtr.Size * 8;
-    //    string cwd = AssemblyDirectory(assembly);
-    //    string result = FindExePath(exe, cwd);
-    //    if (result == null)
-    //    {
-    //        result = FindExePath(exe, $"{cwd}\\{bit}bit");
-    //        if (result == null)
-    //        {
-    //            cwd = Path.Combine(cwd, "assets");
-    //            result = FindExePath(exe, $"{cwd}\\{bit}bit");
-    //        }
-    //    }
-    //    return result;
-    //}
-    //protected string AssemblyDirectory(Assembly assembly)
-    //{
-    //    string codeBase = assembly.CodeBase;
-    //    UriBuilder uri = new UriBuilder(codeBase);
-    //    string path = Uri.UnescapeDataString(uri.Path);
-    //    return Path.GetDirectoryName(path);
-    //}
     public void SetValue(string name, dynamic? value)
     {
         engine!.Execute($"globalThis.{name}=({EasyObject.FromObject(value).ToJson()})");

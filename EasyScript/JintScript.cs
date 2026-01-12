@@ -1,3 +1,4 @@
+//css_nuget Jint
 using Jint;
 using System.IO;
 using System.Reflection;
@@ -19,10 +20,7 @@ internal class JintScript
             var echo = _globals.echo;
             var log = _globals.log;
             var getenv = _globals.getenv;
-            //var appFile = _globals.appFile;
-            //var appDir = _globals.appDir;
             var $ns = importNamespace;
-            
             """);
         return engine;
     }
@@ -41,12 +39,4 @@ internal class JintScriptGlobal
     {
         return System.Environment.GetEnvironmentVariable(name);
     }
-    //public string appFile()
-    //{
-    //    return Assembly.GetExecutingAssembly().Location;
-    //}
-    //public string appDir()
-    //{
-    //    return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-    //}
 }
