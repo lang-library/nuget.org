@@ -7,6 +7,8 @@ cd $cwd
 rm -rf *.nupkg
 nuget-gen EasyScript.cs
 cd $cwd/build-EasyScript
-dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" EasyScript.csproj
+dotnet build -p:Configuration=Release -p:Platform="Any CPU" EasyScript.csproj
+#dotnet pack -o .. -p:Configuration=Release -p:Platform="Any CPU" EasyScript.csproj
+dotnet pack -o . -p:Configuration=Release -p:Platform="Any CPU" EasyScript.csproj
 cd $cwd
 ls -ltr *.nupkg
