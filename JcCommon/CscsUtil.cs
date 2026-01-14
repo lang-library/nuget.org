@@ -59,6 +59,7 @@ public static class CscsUtil
     }
     private static void ParseSource(string srcPath)
     {
+        if (srcPath.StartsWith("$")) return;
         string source = File.ReadAllText(srcPath);
         Directory.SetCurrentDirectory(Path.GetDirectoryName(srcPath));
         string[] lines = Sys.TextToLines(source).ToArray();
