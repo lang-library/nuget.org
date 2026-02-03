@@ -463,6 +463,33 @@ SWIGEXPORT int SWIGSTDCALL CSharp_Execute3(unsigned short * jarg1, unsigned shor
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_Launch3(unsigned short * jarg1, unsigned short * jarg2, unsigned short * jarg3) {
+  std::wstring *arg1 = 0 ;
+  std::wstring *arg2 = 0 ;
+  std::wstring *arg3 = 0 ;
+  
+  if (!jarg1) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg1_str(Swig_csharp_UTF16ToWString(jarg1));
+  arg1 = &arg1_str; 
+  if (!jarg2) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg2_str(Swig_csharp_UTF16ToWString(jarg2));
+  arg2 = &arg2_str; 
+  if (!jarg3) {
+    SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpArgumentNullException, "null wstring", 0);
+    return ;
+  }
+  std::wstring arg3_str(Swig_csharp_UTF16ToWString(jarg3));
+  arg3 = &arg3_str; 
+  Launch3((std::wstring const &)*arg1,(std::wstring const &)*arg2,(std::wstring const &)*arg3);
+}
+
+
 #ifdef __cplusplus
 }
 #endif

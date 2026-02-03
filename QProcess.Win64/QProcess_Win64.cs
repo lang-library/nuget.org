@@ -16,4 +16,9 @@ public class QProcess_Win64 {
     return ret;
   }
 
+  public static void Launch3(string exe, string args, string cwd) {
+    QProcess_Win64PINVOKE.Launch3(exe, args, cwd);
+    if (QProcess_Win64PINVOKE.SWIGPendingException.Pending) throw QProcess_Win64PINVOKE.SWIGPendingException.Retrieve();
+  }
+
 }

@@ -3,6 +3,7 @@ QT = core
 TEMPLATE = lib
 CONFIG += c++20 dll
 
+QMAKE_CXXFLAGS += -w
 INCLUDEPATH += $(HOME)/common/include
 INCLUDEPATH += $(HOME)/cmd
 DESTDIR = $$PWD
@@ -10,8 +11,8 @@ DEFINES += STRCONV_NLOHMANN
 LIBS += -lgccpp -lgc -lpthread
 #LIBS += $(HOME)/cmd/xxx.native.lib
 
-INCLUDEPATH += $(HOME)/cmd/neko-2.3.0-win64/include
-LIBS += $(HOME)/cmd/neko-2.3.0-win64/neko.lib
+#INCLUDEPATH += $(HOME)/cmd/neko-2.3.0-win64/include
+#LIBS += $(HOME)/cmd/neko-2.3.0-win64/neko.lib
 
 DESTDIR = $$PWD
 DEFINES += STRCONV_NLOHMANN
